@@ -1,12 +1,17 @@
 import React from "react";
-import ExpenseTracker from "./components/ExpenseTracker"; // Correct import path
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/Homepage";
+import ExpenseTracker from "./components/ExpenseTracker";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <ExpenseTracker />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/tracker" element={<ExpenseTracker />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
