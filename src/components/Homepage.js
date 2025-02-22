@@ -75,19 +75,6 @@ const styles = {
     gap: '40px',
     alignItems: 'center'
   },
-  featureGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '30px',
-    marginTop: '40px'
-  },
-  featureCard: {
-    backgroundColor: '#fff',
-    padding: '30px',
-    borderRadius: '8px',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-    textAlign: 'center'
-  },
   aboutSection: {
     textAlign: 'center',
     backgroundColor: '#f8fafc',
@@ -131,7 +118,12 @@ const Homepage = () => {
           >
             Go to Expense Tracker
           </button>
-          <button style={{...styles.button, ...styles.secondaryButton}}>Learn More</button>
+          <button 
+            style={{...styles.button, ...styles.secondaryButton}} 
+            onClick={() => navigate('/learn-more')}
+          >
+            Learn More
+          </button>
         </div>
       </section>
 
@@ -159,24 +151,6 @@ const Homepage = () => {
               <li style={{marginBottom: '15px'}}>🎯 Custom budget planning</li>
               <li style={{marginBottom: '15px'}}>📈 AI-powered recommendations</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="features" style={{...styles.section, backgroundColor: '#f8fafc'}}>
-        <h2 style={{textAlign: 'center', fontSize: '36px', marginBottom: '40px'}}>Our Features</h2>
-        <div style={styles.featureGrid}>
-          <div style={styles.featureCard}>
-            <h3 style={{color: '#3498db'}}>Expense Analysis</h3>
-            <p>Understand where your money is going with detailed reports and insights.</p>
-          </div>
-          <div style={styles.featureCard}>
-            <h3 style={{color: '#3498db'}}>Smart Budgeting</h3>
-            <p>Set financial goals and track your progress with AI-driven budgeting.</p>
-          </div>
-          <div style={styles.featureCard}>
-            <h3 style={{color: '#3498db'}}>Financial Planning</h3>
-            <p>Plan your expenses wisely with intelligent recommendations based on your habits.</p>
           </div>
         </div>
       </section>
