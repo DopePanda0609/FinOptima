@@ -1,4 +1,7 @@
+# FinOptima
 # React + Vite
+
+Frontend for FinOptima, a financial planner and advisor.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
